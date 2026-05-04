@@ -1,0 +1,46 @@
+﻿@model MvcCreditApp1.Models.Credit
+
+@{
+    ViewBag.Title = "Удаление кредита";
+}
+
+<h2>Удаление кредита</h2>
+
+<h3>Вы уверены, что хотите удалить этот кредит?</h3>
+<div>
+    <fieldset>
+        <legend>Кредит</legend>
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Head)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Head)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Period)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Period)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Sum)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Sum)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Procent)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Procent)
+            </dd>
+        </dl>
+    </fieldset>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CreditId" />
+        <input type="submit" value="Удалить" /> |
+        @Html.ActionLink("Вернуться в список", "Index")
+    </form>
+</div>

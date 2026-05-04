@@ -1,0 +1,43 @@
+﻿@model MvcCreditApp1.Models.Credit
+
+@{
+    ViewBag.Title = "Подробности кредита";
+}
+
+<h2>Подробности кредита</h2>
+
+<div>
+    <fieldset>
+        <legend>Кредит</legend>
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Head)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Head)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Period)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Period)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Sum)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Sum)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Procent)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Procent)
+            </dd>
+        </dl>
+    </fieldset>
+</div>
+<div>
+    @Html.ActionLink("Изменить", "Edit", new { id = Model.CreditId }) |
+    @Html.ActionLink("Вернуться в список", "Index")
+</div>
