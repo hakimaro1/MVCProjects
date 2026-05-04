@@ -5,34 +5,22 @@ namespace WebMVCR1.Controllers
 {
     public class HomeController : Controller
     {
-        private static PersonRepository db = new PersonRepository();
-
-        public ViewResult Index()
+        public string Index(string hel)
         {
-            int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Доброе утро" : "Добрый день";
-            ViewData["Mes"] = "хорошего настроения";
-
-            return View();
-        }
-        public ViewResult OutputData()
-        {
-            ViewBag.Pers = db.GetAllResponses;
-            ViewBag.Count = db.NumberOfPerson;
-            return View("ListPerson");
+            string Greeting = ModelClass.ModelHello() + ", " + hel;
+            return Greeting;
         }
 
         [HttpGet]
-        public ViewResult InputData()
+        public IActionResult InputData()
         {
-            return View();
+            return View(new ModelClass());
         }
 
         [HttpPost]
-        public ViewResult InputData(Person p)
+        public IActionResult InputData(ModelClass model)
         {
-            db.AddResponse(p);
-            return View("Hello", p);
+            return View(model);
         }
     }
 }

@@ -1,0 +1,2 @@
+wwwroot\Content\site.css
+C:\Users\sanya\Desktop\InternetClub\WebMVCR1\WebMVCR1\wwwroot\Content\site.css

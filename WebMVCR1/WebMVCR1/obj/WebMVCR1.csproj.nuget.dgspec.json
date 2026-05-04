@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sanya\\Desktop\\InternetClub\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj": {}
+    "C:\\Users\\sanya\\Desktop\\MVCLab4\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sanya\\Desktop\\InternetClub\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj": {
+    "C:\\Users\\sanya\\Desktop\\MVCLab4\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanya\\Desktop\\InternetClub\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj",
+        "projectUniqueName": "C:\\Users\\sanya\\Desktop\\MVCLab4\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj",
         "projectName": "WebMVCR1",
-        "projectPath": "C:\\Users\\sanya\\Desktop\\InternetClub\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj",
+        "projectPath": "C:\\Users\\sanya\\Desktop\\MVCLab4\\WebMVCR1\\WebMVCR1\\WebMVCR1.csproj",
         "packagesPath": "C:\\Users\\sanya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanya\\Desktop\\InternetClub\\WebMVCR1\\WebMVCR1\\obj\\",
+        "outputPath": "C:\\Users\\sanya\\Desktop\\MVCLab4\\WebMVCR1\\WebMVCR1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,12 +52,6 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "dependencies": {
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[10.0.2, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -77,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
