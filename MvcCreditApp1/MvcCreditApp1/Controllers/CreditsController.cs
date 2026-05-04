@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcCreditApp1.Data;
@@ -5,6 +6,7 @@ using MvcCreditApp1.Models;
 
 namespace MvcCreditApp1.Controllers
 {
+    [Authorize]
     public class CreditsController : Controller
     {
         private readonly CreditContext _context;

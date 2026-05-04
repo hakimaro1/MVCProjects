@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MvcCreditApp1.Data;
@@ -10,6 +11,18 @@ namespace MvcCreditApp1.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly CreditContext db;
+
+        public ActionResult BidSearch(string name)
+        {
+            var allBids = db.Bids.Where(a =>
+           a.CreditHead.Contains(name)).ToList();
+            if (allBids.Count == 0)
+            {
+                return Content("Указанный кредит " + name + " не найден");
+                //return HttpNotFound();
+            }
+            return PartialView(allBids);
+        }
 
         public HomeController(ILogger<HomeController> logger, CreditContext context)
         {
@@ -29,6 +42,7 @@ namespace MvcCreditApp1.Controllers
             ViewBag.Credits = allCredits;
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult CreateBid()
         {
